@@ -6,19 +6,36 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ProductComponent } from './product/product.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreInfoService } from './store-info.service';
+import {
+  MatMenuModule,
+  MatButtonModule,
+  MatIconModule,
+  MatGridListModule,
+  MatListModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatMenuModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatGridListModule,
+    MatListModule
   ],
-  providers: [],
+  providers: [StoreInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
